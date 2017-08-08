@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,6 @@ namespace Task
 {
     class Program
     {
-
         static void TestWithoutService()
         {
             using (var db = new ShopContext())
@@ -56,13 +56,16 @@ namespace Task
                 var order2 = new Order { Product = ball, Quantity = 2 };
                 var order3 = new Order { Product = auto, Quantity = 3 };
                 var order4 = new Order { Product = window, Quantity = 10 };
-                var purchase = new Purchase { Basket = new List<Order> { order1, order2, order3, order4 }, PurchaseId = 1 };
+                var purchase1 = new Purchase { PurchaseId = 1, Basket = new List<Order> { order4, order2 } };
+                var purchase2 = new Purchase { PurchaseId = 2, Basket = new List<Order> { order3, order1 } };
 
                 db.Products.Add(phone);
                 db.Products.Add(auto);
                 db.Products.Add(window);
                 db.Products.Add(ball);
-                db.Purchases.Add(purchase);
+                db.SaveChanges();
+                db.Purchases.Add(purchase1);
+                db.Purchases.Add(purchase2);
                 db.SaveChanges();
 
                 var prodQuery = from p in db.Products
@@ -91,6 +94,7 @@ namespace Task
         static void TestWithService()
         {
             Console.WriteLine("Start work with DB: ");
+            DbContext context = new ShopContext();
             var phone = new Product
             {
                 Category = Category.Electronics,
@@ -127,16 +131,51 @@ namespace Task
                 Title = "Nike ball"
             };
 
-            var service = new ProductService(new ShopContext());
-            service.Create(phone);
-            //service.Create(phone); throws exception
-            service.Create(auto);
-            service.Create(window);
-            service.Create(ball);
+            var order1 = new Order { OrderId = 1, Product = phone, Quantity = 1 };
+            var order2 = new Order { OrderId = 2, Product = ball, Quantity = 2 };
+            var order3 = new Order { OrderId = 3, Product = auto, Quantity = 5 };
+            var order4 = new Order { OrderId = 4, Product = window, Quantity = 10 };
+            var purchase1 = new Purchase {PurchaseId = 1, Basket = new List<Order> {order4, order2}};
+            var purchase2 = new Purchase {PurchaseId = 2, Basket = new List<Order> {order3, order1}};
 
-            foreach (var item in service.GetAll())
+            var service1 = new ProductService(context);
+            var service2 = new PurchaseService(context);
+            service1.CreateProduct(phone);
+            //service.Create(phone); throws exception
+            service1.CreateProduct(auto);
+            service1.CreateProduct(window);
+            service1.CreateProduct(ball);
+            Console.WriteLine("___Products___");
+            foreach (var item in service1.GetAllProducts())
             {
                 Console.WriteLine(item);
+            }
+
+            service2.CreatePurchase(purchase1);
+            service2.CreatePurchase(purchase2);
+            Console.WriteLine("__Purchases___");
+            foreach (var item in service2.GetAllPurchases())
+            {
+                Console.WriteLine(item);
+            }
+
+            service2.DeletePurchase(purchase1);
+            Console.WriteLine("__Purchases_after_deleting___");
+            foreach (var item in service2.GetAllPurchases())
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("__Products_after_deleting___");
+            foreach (var item in service1.GetAllProducts())
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("__Orders___");
+            foreach (var item in context.Set<Order>())
+            {
+                Console.WriteLine(item.OrderId);
             }
 
             Console.ReadKey();
@@ -145,7 +184,7 @@ namespace Task
         static void Main(string[] args)
         {
             //TestWithoutService();
-            //TestWithService();
+            TestWithService();
         }
     }
 }

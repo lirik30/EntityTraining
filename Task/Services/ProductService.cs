@@ -12,20 +12,37 @@ namespace Task.Services
     {
         private DbContext _context;
 
+        /// <summary>
+        /// Create service for work with products
+        /// </summary>
+        /// <param name="context"></param>
         public ProductService(DbContext context) => _context = context;
 
+        /// <summary>
+        /// Get product by title
+        /// </summary>
+        /// <param name="title">Title of product</param>
+        /// <returns>Product if it exists, otherwise null</returns>
         public Product GetProductEntity(string title)
         {
             return _context.Set<Product>().FirstOrDefault(x => x.Title == title);
         }
 
-        public IEnumerable<Product> GetAll()
+        /// <summary>
+        /// Get all orders from DB?
+        /// </summary>
+        /// <returns>Collection of products from database</returns>
+        public IEnumerable<Product> GetAllProducts()
         {
             var all = _context.Set<Product>();
             return all;
         }
 
-        public void Create(Product product)
+        /// <summary>
+        /// Create order in the DB
+        /// </summary>
+        /// <param name="product">Product to adding</param>
+        public void CreateProduct(Product product)
         {
             if (_context.Set<Product>().FirstOrDefault(x => x.Title == product.Title) != null)
                 throw new InvalidOperationException($"Product {product.Title} exist in this storage");
@@ -34,7 +51,11 @@ namespace Task.Services
             _context.SaveChanges();
         }
 
-        public void Delete(Product product)
+        /// <summary>
+        /// Delete order from DB
+        /// </summary>
+        /// <param name="product">Product to delete</param>
+        public void DeleteProduct(Product product)
         {
             var deletedProd = _context.Set<Product>().SingleOrDefault(x => x.Title == product.Title);
             if(deletedProd == null)
@@ -44,7 +65,7 @@ namespace Task.Services
             _context.SaveChanges();
         }
 
-        public void Update(Product product)
+        public void UpdateProduct(Product product)
         {
             //?
             throw new NotImplementedException();

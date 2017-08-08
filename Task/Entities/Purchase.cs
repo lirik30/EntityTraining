@@ -10,10 +10,12 @@ namespace Task.Entities
     public class Purchase
     {
         public int PurchaseId { get; set; }
-        public List<Order> Basket { get; set; }
+        public ICollection<Order> Basket { get; set; }
+
 
         public override string ToString()
         {
+            int total = 0;
             var sb = new StringBuilder(string.Empty);
             sb.Append($"Purchase №{PurchaseId}");
             sb.Append(Environment.NewLine);
@@ -21,10 +23,11 @@ namespace Task.Entities
             sb.Append(Environment.NewLine);
             foreach (var item in Basket)
             {
-                sb.Append($"{item.Product.Title} - {item.Product.Price} - {item.Quantity}");
+                total += item.Product.Price * item.Quantity;
+                sb.Append($"{item.Product.Title} - {item.Quantity} items : {item.Product.Price * item.Quantity}");
                 sb.Append(Environment.NewLine);
             }
-            sb.Append("-------------------------");
+            sb.Append($"------{total}------");
             return sb.ToString();
         }
     }

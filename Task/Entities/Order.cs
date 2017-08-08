@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Task.Entities
 {
+    /// <summary>
+    /// Purchase unit
+    /// </summary>
     public class Order
     {
         public int OrderId { get; set; }

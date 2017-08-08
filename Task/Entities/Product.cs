@@ -9,6 +9,7 @@ using System.Drawing;
 
 namespace Task.Entities
 {
+    //?
     public enum Category
     {
         Electronics,
