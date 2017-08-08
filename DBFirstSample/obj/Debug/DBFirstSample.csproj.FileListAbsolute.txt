@@ -1,0 +1,12 @@
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\DBFirstSample\bin\Debug\DBFirstSample.exe.config
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\DBFirstSample\bin\Debug\DBFirstSample.exe
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\DBFirstSample\bin\Debug\DBFirstSample.pdb
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\DBFirstSample\bin\Debug\EntityFramework.dll
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\DBFirstSample\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\DBFirstSample\bin\Debug\EntityFramework.xml
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\DBFirstSample\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\DBFirstSample\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\DBFirstSample\obj\Debug\DBFirstSample.csprojResolveAssemblyReference.cache
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\DBFirstSample\obj\Debug\DBFirstSample.exe
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\DBFirstSample\obj\Debug\DBFirstSample.pdb
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\DBFirstSample\bin\Debug\ru\EntityFramework.SqlServer.resources.dll

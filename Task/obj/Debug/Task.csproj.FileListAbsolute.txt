@@ -1,0 +1,12 @@
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\Task\bin\Debug\Task.exe.config
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\Task\bin\Debug\Task.exe
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\Task\bin\Debug\Task.pdb
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\Task\bin\Debug\EntityFramework.dll
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\Task\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\Task\bin\Debug\EntityFramework.xml
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\Task\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\Task\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\Task\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\Task\obj\Debug\Task.csprojResolveAssemblyReference.cache
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\Task\obj\Debug\Task.exe
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\Task\obj\Debug\Task.pdb

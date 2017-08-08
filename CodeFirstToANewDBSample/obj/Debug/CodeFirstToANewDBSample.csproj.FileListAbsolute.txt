@@ -1,0 +1,15 @@
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\CodeFirstToANewDBSample\bin\Debug\CodeFirstToANewDBSample.exe.config
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\CodeFirstToANewDBSample\bin\Debug\CodeFirstToANewDBSample.exe
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\CodeFirstToANewDBSample\bin\Debug\CodeFirstToANewDBSample.pdb
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\CodeFirstToANewDBSample\bin\Debug\EntityFramework.dll
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\CodeFirstToANewDBSample\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\CodeFirstToANewDBSample\bin\Debug\EntityFramework.xml
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\CodeFirstToANewDBSample\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\CodeFirstToANewDBSample\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\CodeFirstToANewDBSample\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\CodeFirstToANewDBSample\obj\Debug\CodeFirstToANewDBSample.exe
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\CodeFirstToANewDBSample\obj\Debug\CodeFirstToANewDBSample.pdb
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\CodeFirstToANewDBSample\obj\Debug\CodeFirstToANewDBSample.Migrations.InitialCreate.resources
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\CodeFirstToANewDBSample\obj\Debug\CodeFirstToANewDBSample.csproj.GenerateResource.Cache
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\CodeFirstToANewDBSample\obj\Debug\CodeFirstToANewDBSample.Migrations.AddUrl.resources
+C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\CodeFirstToANewDBSample\obj\Debug\CodeFirstToANewDBSample.Migrations.AddUser.resources
