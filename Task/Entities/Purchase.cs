@@ -9,9 +9,11 @@ namespace Task.Entities
 {
     public class Purchase
     {
-        public int PurchaseId { get; set; }
-        public ICollection<Order> Basket { get; set; }
+        public Purchase() => Orders = new List<Order>();
 
+        public int PurchaseId { get; set; }
+
+        public virtual ICollection<Order> Orders { get; set; }
 
         public override string ToString()
         {
@@ -21,7 +23,7 @@ namespace Task.Entities
             sb.Append(Environment.NewLine);
             sb.Append("-------------------------");
             sb.Append(Environment.NewLine);
-            foreach (var item in Basket)
+            foreach (var item in Orders)
             {
                 total += item.Product.Price * item.Quantity;
                 sb.Append($"{item.Product.Title} - {item.Quantity} items : {item.Product.Price * item.Quantity}");

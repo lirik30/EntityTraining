@@ -13,3 +13,4 @@ C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\CodeFirstToA
 C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\CodeFirstToANewDBSample\obj\Debug\CodeFirstToANewDBSample.csproj.GenerateResource.Cache
 C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\CodeFirstToANewDBSample\obj\Debug\CodeFirstToANewDBSample.Migrations.AddUrl.resources
 C:\Users\Kiril\documents\visual studio 2017\Projects\EntityTraining\CodeFirstToANewDBSample\obj\Debug\CodeFirstToANewDBSample.Migrations.AddUser.resources
+C:\Users\Kiril\Documents\Visual Studio 2017\Projects\EntityTraining\CodeFirstToANewDBSample\obj\Debug\CodeFirstToANewDBSample.csprojResolveAssemblyReference.cache

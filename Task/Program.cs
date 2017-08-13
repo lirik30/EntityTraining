@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Task.Entities;
 using Task.Services;
 
@@ -56,14 +54,14 @@ namespace Task
                 var order2 = new Order { Product = ball, Quantity = 2 };
                 var order3 = new Order { Product = auto, Quantity = 3 };
                 var order4 = new Order { Product = window, Quantity = 10 };
-                var purchase1 = new Purchase { PurchaseId = 1, Basket = new List<Order> { order4, order2 } };
-                var purchase2 = new Purchase { PurchaseId = 2, Basket = new List<Order> { order3, order1 } };
+                var purchase1 = new Purchase { PurchaseId = 1, Orders = new List<Order> { order4, order2 } };
+                var purchase2 = new Purchase { PurchaseId = 2, Orders = new List<Order> { order3, order1 } };
 
-                db.Products.Add(phone);
-                db.Products.Add(auto);
-                db.Products.Add(window);
-                db.Products.Add(ball);
-                db.SaveChanges();
+                //db.Products.Add(phone);
+                //db.Products.Add(auto);
+                //db.Products.Add(window);
+                //db.Products.Add(ball);
+                //db.SaveChanges();
                 db.Purchases.Add(purchase1);
                 db.Purchases.Add(purchase2);
                 db.SaveChanges();
@@ -72,8 +70,8 @@ namespace Task
                                 orderby p.Title
                                 select p;
 
-                var purchaseQ = from p in db.Purchases
-                                select p;
+                //var purchaseQ = from p in db.Purchases
+                //                select p;
 
                 Console.WriteLine("---PRODUCTS---");
                 foreach (var item in prodQuery)
@@ -82,7 +80,7 @@ namespace Task
                     Console.WriteLine();
                 }
                 Console.WriteLine("---PURCHASE---");
-                foreach (var item in purchaseQ)
+                foreach (var item in db.Purchases)
                 {
                     Console.WriteLine(item);
                 }
@@ -135,48 +133,58 @@ namespace Task
             var order2 = new Order { OrderId = 2, Product = ball, Quantity = 2 };
             var order3 = new Order { OrderId = 3, Product = auto, Quantity = 5 };
             var order4 = new Order { OrderId = 4, Product = window, Quantity = 10 };
-            var purchase1 = new Purchase {PurchaseId = 1, Basket = new List<Order> {order4, order2}};
-            var purchase2 = new Purchase {PurchaseId = 2, Basket = new List<Order> {order3, order1}};
+            var purchase1 = new Purchase {PurchaseId = 1, Orders = new List<Order> {order4, order2}};
+            var purchase2 = new Purchase {PurchaseId = 2, Orders = new List<Order> {order3, order1}};
 
             var service1 = new ProductService(context);
             var service2 = new PurchaseService(context);
-            service1.CreateProduct(phone);
+            //service1.CreateProduct(phone);
             //service.Create(phone); throws exception
-            service1.CreateProduct(auto);
-            service1.CreateProduct(window);
-            service1.CreateProduct(ball);
+            //service1.CreateProduct(auto);
+            //service1.CreateProduct(window);
+            //service1.CreateProduct(ball);
             Console.WriteLine("___Products___");
             foreach (var item in service1.GetAllProducts())
             {
                 Console.WriteLine(item);
             }
 
-            service2.CreatePurchase(purchase1);
-            service2.CreatePurchase(purchase2);
+            //service2.CreatePurchase(purchase1);
+            //service2.CreatePurchase(purchase2);
             Console.WriteLine("__Purchases___");
             foreach (var item in service2.GetAllPurchases())
             {
                 Console.WriteLine(item);
             }
 
-            service2.DeletePurchase(purchase1);
-            Console.WriteLine("__Purchases_after_deleting___");
+
+            purchase2.Orders.Add(order4);
+            purchase2.Orders.Add(order2);
+
+            service2.UpdatePurchase(purchase2);//TODO
+            Console.WriteLine("__Purchases_after_updating_");
             foreach (var item in service2.GetAllPurchases())
             {
                 Console.WriteLine(item);
             }
+            //service2.DeletePurchase(purchase1);
+            //Console.WriteLine("__Purchases_after_deleting___");
+            //foreach (var item in service2.GetAllPurchases())
+            //{
+            //    Console.WriteLine(item);
+            //}
 
-            Console.WriteLine("__Products_after_deleting___");
-            foreach (var item in service1.GetAllProducts())
-            {
-                Console.WriteLine(item);
-            }
+            //Console.WriteLine("__Products_after_deleting___");
+            //foreach (var item in service1.GetAllProducts())
+            //{
+            //    Console.WriteLine(item);
+            //}
 
-            Console.WriteLine("__Orders___");
-            foreach (var item in context.Set<Order>())
-            {
-                Console.WriteLine(item.OrderId);
-            }
+            //Console.WriteLine("__Orders___");
+            //foreach (var item in context.Set<Order>())
+            //{
+            //    Console.WriteLine(item.OrderId);
+            //}
 
             Console.ReadKey();
         }

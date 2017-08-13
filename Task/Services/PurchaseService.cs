@@ -65,10 +65,12 @@ namespace Task.Services
             _context.SaveChanges();
         }
 
-        public void UpdatePurchase(Product product)
+        public void UpdatePurchase(Purchase purchase)//id?
         {
-            //?
-            throw new NotImplementedException();
+            var updatePurchase = _context.Set<Purchase>().SingleOrDefault(x => x.PurchaseId == purchase.PurchaseId);
+
+            updatePurchase.Orders = purchase.Orders;
+            _context.SaveChanges();
         }
     }
 }

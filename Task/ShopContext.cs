@@ -10,6 +10,8 @@ namespace Task
 {
     class ShopContext : DbContext
     {
+        public ShopContext() : base("ShopDB") { }
+
         public DbSet<Product> Products { get; set; }
         public DbSet<Purchase> Purchases { get; set; }
     }
