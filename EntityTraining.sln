@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBFirstSample", "DBFirstSample\DBFirstSample.csproj", "{DD900D29-94D3-4797-918F-87DCA16AC817}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstToANewDBSample", "CodeFirstToANewDBSample\CodeFirstToANewDBSample.csproj", "{4B66C42D-CBE8-487A-AB65-EC4ADC9F148C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task", "Task\Task.csproj", "{8E37D748-514A-49AC-A9C0-8D72AFA40281}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcUI", "MvcUI\MvcUI.csproj", "{EEE5E8E5-13D2-42BA-B216-39EDD21A265F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{8E37D748-514A-49AC-A9C0-8D72AFA40281}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E37D748-514A-49AC-A9C0-8D72AFA40281}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E37D748-514A-49AC-A9C0-8D72AFA40281}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEE5E8E5-13D2-42BA-B216-39EDD21A265F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEE5E8E5-13D2-42BA-B216-39EDD21A265F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEE5E8E5-13D2-42BA-B216-39EDD21A265F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEE5E8E5-13D2-42BA-B216-39EDD21A265F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

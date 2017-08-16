@@ -67,8 +67,8 @@ namespace Task.Services
 
         public void UpdateProduct(Product product)
         {
-            //?
-            throw new NotImplementedException();
+            _context.Entry(product).State = EntityState.Modified;
+            _context.SaveChanges();
         }
     }
 }

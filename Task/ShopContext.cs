@@ -8,9 +8,9 @@ using Task.Entities;
 
 namespace Task
 {
-    class ShopContext : DbContext
+    public class ShopContext : DbContext
     {
-        public ShopContext() : base("ShopDB") { }
+        public ShopContext() : base("name=ShopContext") { }
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Purchase> Purchases { get; set; }

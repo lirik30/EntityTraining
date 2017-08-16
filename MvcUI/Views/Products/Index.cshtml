@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MvcUI.Models.MvcProduct>
+
+@{
+    ViewBag.Title = "Start page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List of existing products</h2>
+
+<p>
+    @Html.ActionLink("Create new product", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.ActionLink("Edit product", "Edit", new {title = item.Title}) |
+            @Html.ActionLink("Product details", "Details", new {title = item.Title}) |
+            @Html.ActionLink("Delete product", "Delete", new {title = item.Title})
+        </td>
+    </tr>
+}
+
+</table>
